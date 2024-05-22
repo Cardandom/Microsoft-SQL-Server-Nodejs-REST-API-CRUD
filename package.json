@@ -1,0 +1,26 @@
+{
+  "name": "microsoft-sql-server-nodejs-rest-api-crud",
+  "version": "1.0.0",
+  "description": "Creación de una aplicacion de backend usando Nodejs y Microsoft SQL Server 2019. Crearemos un CRUD(Create, React, Update, Delete) de una REST API.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js --exec babel-node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "mssql": "^10.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.5",
+    "nodemon": "^3.1.0"
+  }
+}
