@@ -20,3 +20,5 @@ export async function getConection() {
   }
 }
 
+export {sql}
+
