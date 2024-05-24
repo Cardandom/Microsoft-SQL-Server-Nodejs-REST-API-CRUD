@@ -40,3 +40,47 @@ export const createNewProduct = async (req, res) => {
     res.send(error.mesagge);
   }
 };
+
+export const getProductById = async (req, res) => {
+
+  const {id} = req.params;
+
+  const pool = await getConection();
+
+  const result = await pool
+  .request()
+  .input('id', id)
+  .query(queries.getProductById);
+
+  console.log(result)
+
+  res.send(result.recordset[0])
+
+}
+
+export const deleteProductById = async (req, res) => {
+
+  const {id} = req.params;
+
+  const pool = await getConection();
+
+  const result = await pool
+  .request()
+  .input('id', id)
+  .query(queries.deleteProduct);
+
+  res.sendStatus(204);
+
+}
+
+export const getTotalProducts = async (req, res) => {
+
+  const pool = await getConection();
+
+  const result = await pool
+  .request()
+  .query(queries.getTotalProducts);
+
+  res.json(result.recordset[0]['']);
+
+}

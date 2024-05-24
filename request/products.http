@@ -1,6 +1,6 @@
 @api = http://localhost:4000/products
 
-GET = {{api}}
+GET {{api}}
 
 ###
 POST {{api}}
@@ -10,3 +10,12 @@ Content-Type: application/json
     "name": "microphone",
     "description": "microphone Sony"
 }
+
+### getting a product
+GET {{api}}/2
+
+### deleting a product
+DELETE {{api}}/5
+
+### get total products
+GET {{api}}/count
